@@ -47,7 +47,7 @@ Aplicación Full Stack para reportar incidencias urbanas. El **frontend** (React
 
 ## 📂 Estructura del proyecto
 
-ReportesUsuario/
+```ReportesUsuario/
 ├── backend_reportes/         # Configuración del backend Django
 │   ├── settings.py           # Config principal de Django
 │   ├── urls.py               # Rutas principales del backend
@@ -75,7 +75,7 @@ ReportesUsuario/
 ├── package.json              # Dependencias del frontend
 ├── README.md                 # Documentación del proyecto
 └── .github/workflows/        # CI/CD con GitHub Actions
-    └── node-django.yml
+    └── node-django.yml ```
     
     ## 📄 Licencia
 
