@@ -21,7 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Paquetes que me hacen la vida más fácil
+    # Paquetes externos
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
@@ -32,20 +32,20 @@ INSTALLED_APPS = [
 
 # --- Middleware para controlar flujo de peticiones ---
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # Esto permite peticiones desde fuera (como React)
+    'corsheaders.middleware.CorsMiddleware',  # Permite peticiones desde fuera (React)
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',  # Para gestionar usuarios
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 # --- Configuración base del proyecto ---
-ROOT_URLCONF = 'backend_reportes.urls'  # <--- CORREGIDO
+ROOT_URLCONF = 'backend_reportes.urls'
 
-# --- Donde se buscan las plantillas (aunque en este proyecto usamos API) ---
+# --- Donde se buscan las plantillas ---
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -62,10 +62,10 @@ TEMPLATES = [
     },
 ]
 
-# --- Motor WSGI para producción ---
-WSGI_APPLICATION = 'backend_reportes.wsgi.application'  # <--- CORREGIDO
+# --- Motor WSGI ---
+WSGI_APPLICATION = 'backend_reportes.wsgi.application'
 
-# --- Base de datos SQLite para desarrollo (rápido y fácil) ---
+# --- Base de datos SQLite ---
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -73,7 +73,7 @@ DATABASES = {
     }
 }
 
-# --- Reglas de validación de contraseñas (lo dejo por defecto) ---
+# --- Validación de contraseñas ---
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -95,14 +95,22 @@ TIME_ZONE = 'Europe/Madrid'
 USE_I18N = True
 USE_TZ = True
 
-# --- Config de archivos estáticos (para frontend si se despliega) ---
+# --- Archivos estáticos ---
 STATIC_URL = 'static/'
 
-# --- Para que Django sepa dónde guardar datos por defecto ---
+# --- Modelo por defecto ---
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# --- Permitir cualquier origen (en desarrollo) ---
-CORS_ALLOW_ALL_ORIGINS = True
+# --- Configuración de CORS ---
+CORS_ALLOW_ALL_ORIGINS = True  # ⚠️ Solo en desarrollo, en producción mejor especificar
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",   # Frontend React
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+]
 
 # --- Config de Django REST Framework ---
 REST_FRAMEWORK = {
@@ -110,6 +118,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',  # Solo autenticados crean/editar/borrar
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ]
 }
