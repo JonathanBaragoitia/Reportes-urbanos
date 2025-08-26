@@ -66,7 +66,7 @@ Aplicación Full Stack para reportar incidencias urbanas. El **frontend** (React
 │       ├── App.js            # Componente principal
 │       └── components/...    # Componentes de UI
 │
-├── docs/                     # Capturas y documentación (opcional)
+├── docs/                     # Capturas y documentación 
 │   ├── frontend.png
 │   └── backend.png
 │
