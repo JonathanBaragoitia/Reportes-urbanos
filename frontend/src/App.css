@@ -1,0 +1,137 @@
+/* Fondo general y tipografía */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 128, 0.1);
+}
+
+/* Título principal */
+h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Inputs y campos de texto */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  background-color: #2e2e2e;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Botones generales */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Sección de login */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+}
+
+.login-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* Formularios */
+.formulario {
+  margin-bottom: 40px;
+}
+
+/* Historial de reportes */
+.historial {
+  margin-top: 40px;
+}
+
+/* Tarjetas de reporte */
+.report-card {
+  background-color: #2a2a2a;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Etiquetas */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* Iconos */
+.emoji {
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+/* Paginación personalizada */
+.paginacion-final {
+  margin-top: 2rem;
+}
+
+/* Espaciado entre botones */
+.mt-4 > button {
+  margin-right: 10px;
+}
+
+/* Ajuste visual extra  */
+body::after {
+  content: "";
+  display: block;
+  height: 100px;
+}
+/* Margen horizontal entre botones de paginación */
+.botones-paginacion button {
+  margin-right: 12px;
+}
+
+.botones-paginacion button:last-child {
+  margin-right: 0;
+}
+/* 🔧 Espacio horizontal entre botones de paginación */
+.botones-paginacion {
+  display: flex;
+  gap: 16px; /* Espacio exacto entre botones */
+  margin-top: 16px;
+  justify-content: center;
+}

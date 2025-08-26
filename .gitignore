@@ -1,0 +1,37 @@
+# 🔥 Carpetas y archivos de Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+env/
+*.log
+
+# 📦 Node/React
+node_modules/
+build/
+dist/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 🧪 Archivos temporales y caché
+*.pot
+*.pyc
+*.pyo
+.coverage
+htmlcov/
+*.migrations/
+
+# 🖼 Archivos multimedia y subida
+/media/
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# 💻 Visual Studio Code
+.vscode/
+
+# 📦 Lockfiles
+package-lock.json
+yarn.lock
