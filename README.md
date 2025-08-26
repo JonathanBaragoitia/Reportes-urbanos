@@ -76,7 +76,8 @@ Aplicación Full Stack para reportar incidencias urbanas. El **frontend** (React
 ├── README.md                 # Documentación del proyecto
 └── .github/workflows/        # CI/CD con GitHub Actions
     └── node-django.yml
-    ```
+    ---
+   
     
     ## 📄 Licencia
 
