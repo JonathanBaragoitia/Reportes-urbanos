@@ -38,9 +38,3 @@ App desarrollada con **Django REST Framework + React**
 
 ---
 
-## 📷 Capturas
-_(añade aquí tus imágenes cuando quieras)_
-
-```markdown
-![Login](docs/login.png)
-![Listado de reportes](docs/reportes.png)
